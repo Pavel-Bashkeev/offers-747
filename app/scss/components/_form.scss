@@ -1,0 +1,79 @@
+.form {
+  max-width: 420px;
+  margin: 0 auto;
+
+
+  &-text {
+    &:not(:nth-child(4)){
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      width: 46px;
+      height: 46px;
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      background-image: url('../images/dest/icons/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      pointer-events: none
+    }
+  }
+
+  &__select {
+    appearance: none;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 64px;
+    border: 1px solid #9C9C9C;
+    outline: 1px solid #9C9C9C;
+    background-color: #fff;
+    font: 400 23px/24px $font;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    font: 400 18px / 24px $font;
+    height: 64px;
+    border: 1px solid #9C9C9C;
+    outline: 1px solid #9C9C9C;
+    border-radius: 5px;
+
+    &::placeholder {
+      font: 400 18px / 24px $font;
+      color: #a9a9a9;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: #009120;
+    border-radius: 5px;
+    padding: 26px 0;
+    color: $white;
+    font: 700 24px/24px $font;
+    transition: all .3s;
+
+    &:hover {
+      background-color: #016617;
+    }
+  }
+}
